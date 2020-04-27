@@ -34,7 +34,7 @@ A simple script to take a file/directory and copy it to another and zip the file
 
 **Example:**
 ```
-[Exampe] # Remove me!
+[Exampe]
 source      = \\some file server\backup
 destination = \\path\to\data\new name
 all_files   = False
