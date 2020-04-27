@@ -1,7 +1,7 @@
 ## HomeLab-Utils
 A place for all my scripts that I use for various homelab tasks.
 
-### Backup Checker
+## Backup Checker
 The Backup checker is used to scan a back-up folder for a specific file type and check it against parameters in the config file. You can configure as many of these as you'd like. Each should start with [Backup Name] and include all the data below. Currently no fields are optional.
 
 **Example:**
@@ -20,7 +20,7 @@ In this case, if the backup is OLDER than 7 days a slack message will be generat
 
 ![Slack Notification](https://raw.githubusercontent.com/hay-kot/HomeLab-Utils/master/Backup%20Checker/Slack%20Notification%20Example.jpg)
 
-### Move, Archive, with Config
+## Move, Archive, with Config
 A simple script to take a file/directory and copy it to another and zip the files.
 
 **Use Cases**
