@@ -8,10 +8,10 @@ The Backup checker is used to scan a back-up folder for a specific file type and
 ```
 [Home Assistant]
 directory = \\path\to\data\backups
-secret = xxxx-123123123123123-123123123123-123123123123-123123123123
-channel = #mychannel
+secret    = xxxx-123123123123123-123123123123-123123123123-123123123123
+channel   = #mychannel
 file_type = .mrbak
-days = 7
+days      = 7
 ```
 - directory = Directory to check
 - secret    = Your Slack API Key
@@ -35,7 +35,7 @@ A simple script to take a file/directory and copy it to another and zip the file
 **Example:**
 ```
 [Exampe] # Remove me!
-source = \\some file server\backup
+source      = \\some file server\backup
 destination = \\path\to\data\new name
 all_files   = False
 clean_up    = True
