@@ -17,3 +17,5 @@ days = 7 - This means in your folder the newest backup must be newer than 7 days
 In this case, if the backup is OLDER than 7 days a slack message will be generated with an error emoji alterting you that the backup ran incorrectly and how old the current newest backup is. If the backup is within 7 days a green checkmark and message saying the backup ran successfully will be sent to the slack channel. 
 
 **Eample Notification**
+
+![Slack Notification](https://raw.githubusercontent.com/hay-kot/HomeLab-Utils/master/Backup%20Checker/Slack%20Notification%20Example.jpg)
