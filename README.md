@@ -1,12 +1,12 @@
 ## HomeLab-Utils
 A place for all my scripts that I use for various homelab tasks.
 
-## Backup Checker
-The Backup checker is used to scan a back-up folder for a specific file type and check it against parameters in the config file. You can configure as many of these as you'd like. Each should start with [Backup Name] and include all the data below. Currently no fields are optional.
+## Backup Manager (Formerly Backup Checker)
+The Backup checker is used to scan a back-up folder for a specific file type and check it against parameters in the config file. You can configure as many of these as you'd like. Each should start with [Backup Name] and include all the data below. Currently no fields are optional. Additionally, Backup Manager will not rename the files not matching the criteria from the config.ini. Names are found by the creation date of the file and formatted like so: Date_Name.extension or 2020.04.31_HomeAssistant.mrbak.
 
 **Example:**
 ```
-[Home Assistant]
+[HomeAssistant]
 directory = \\path\to\data\backups
 secret    = xxxx-123123123123123-123123123123-123123123123-123123123123
 channel   = #mychannel
