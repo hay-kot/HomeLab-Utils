@@ -2,26 +2,42 @@ import os
 import glob
 import configparser
 from tqdm import tqdm
-import datetime
 from slacker import Slacker
+import datetime
+import time
 
 
 def slack_notify(text, channel):
     slack.chat.post_message(
         channel=channel,
         text=text,
-        username="Python Test",
+        username="Python",
         icon_url="http://devarea.com/wp-content/uploads/2017/11/python-300x300.png",
     )
 
 
-timestr = datetime.date.today()
 config = configparser.ConfigParser()
 config.read("config.ini")
 
 config_list = config.sections()
 
 for set_configs in tqdm(config_list):
+    timestr = time.strftime("%Y.%m.%d")
+    directory = config.get(set_configs, "directory")
+    file_type = config.get(set_configs, "file_type").split()
+    file_list = glob.glob(directory + f"/*{file_type}")
+    for file in file_list:
+        created = datetime.datetime.fromtimestamp(os.path.getctime(file)).strftime("%Y.%m.%d",)
+        path, name = os.path.split(file)
+        if name == f"{created}_{set_configs}{file_type[0]}":
+            print("File Named Correctly!")
+        else:
+            print("Renaming Files...")
+            new_name = f"{path}/{created}_{set_configs}{file_type[0]}"
+            os.rename(file, new_name)
+
+for set_configs in tqdm(config_list):
+    timestr = datetime.date.today()
     channel = config.get(set_configs, "channel")
     secret = config.get(set_configs, "secret")
     slack = Slacker(secret)
