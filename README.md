@@ -23,7 +23,7 @@ In this case, if the backup is OLDER than 7 days a slack message will be generat
 
 **Example Notification:**
 
-![Slack Notification](https://raw.githubusercontent.com/hay-kot/HomeLab-Utils/master/Backup%20Checker/Slack%20Notification%20Example.jpg)
+![Slack Notification](https://raw.githubusercontent.com/hay-kot/HomeLab-Utils/master/Backup_Manager/Slack%20Notification%20Example.jpg)
 
 ## Move, Archive, with Config
 A simple script to take a file/directory and copy it to another and zip the files.
